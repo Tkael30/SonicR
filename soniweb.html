@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body  style="background-color:#779900;">
+<p style="text-align:center;color:red;font-size:18px">
+     <h1 class="text-center">
+     <p style="text-align:center;position:relative; top:25px;">
+        Sonic Drink Roulette
+    </h1>
+    <br />
+    <center>
+    <div style = "position:relative; top:75px; font-color:red;">
+        <h2>Enter Number of Fellas:</h2>
+    </center>
+    </div>
+        
+<p style="text-align:center;color:red;font-size:18px; position:relative; top:100px;">
+<py-script>
+    import random
+    from js import document,alert
+    def drinko(fel):
+        flavors = ["Vanilla", "Chocolate", "Cherry", "Diet Cherry", "Grape", "Orange", "Blue Coconut", "Watermelon", "Fresh Lemon","Fresh Lime", "Strawberry", "Pineapple", "Minute Maid® Apple Juice","Minute Maid® Cranberry Juice", "Minute Maid® Lemonade", "Hi-C® Fruit Punch", "Powerade®"]
+        limeades = ["Limeade", "Low Calorie Diet Limeade", "Cherry Limeade", "Low Calorie Diet Cherry Limeade", "Strawberry Limeade", "Diet Strawberry Limeade", "Apple Limeade", "Diet Apple Limeade", "Cranberry Limeade", "Diet Cranberry Limeade"]
+        drinks = ["COCA-COLA®","Diet Coke®","Coca-Cola® Zero","DR PEPPER®","Diet Dr Pepper®","BARQ Root Beer","SPRITE®","Hi-C® Fruit Punch","Fanta® Orange","POWERADE® Mountain Berry Blast® Drink","Ocean Water®","limemade","limemade","limemade","limemade"]
+        sizes = ["Kids", "Small", "Medium", "Medium", "Large"]
+        fellas = fel
+        while fellas > 0:
+            d= drinks[random.randint(0,len(drinks)-1)]
+            f = flavors[random.randint(0,len(flavors)-1)]
+            size = sizes[random.randint(0,len(sizes)-1)]
+            if d == "limemade":
+                d = limeades[random.randint(0,len(limeades)-1)]
+            a = size + " " +f +" "+ d
+            print(a)
+            fellas -= 1
+    def rdrink():
+        fellas = input("Drinks:")
+        fellas = int(fellas)
+        drinko(fellas)
+    rdrink()
+</py-script>
+       
+    </body>
+    </html>
